@@ -1,0 +1,8 @@
+describe("Temperature change", () => {
+  it("tests Temperature change", () => {
+    cy.viewport(1920, 953);
+    cy.visit("https://playground.bondaracademy.com/pages/iot-dashboard");
+    cy.get("div:nth-of-type(1) > div:nth-of-type(3) i").click();
+    cy.get("div:nth-of-type(1) > div:nth-of-type(3) i").click();
+  });
+});

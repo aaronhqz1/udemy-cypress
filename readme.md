@@ -1,84 +1,69 @@
 # udemy-cypress
 
-Cypress learning repository for Front-End Testing and QA.
+Repositorio de aprendizaje de Cypress para Front-End Testing y QA.
 
-------------------------------------------------------------------------
+---
 
-# Instalación de Cypress
+## Requisitos
 
-1.  Abrir una consola o el **terminal de VS Code**.
-2.  Ejecutar Cypress con el siguiente comando:
+- [Node.js](https://nodejs.org/) instalado en el sistema.
+- [VS Code](https://code.visualstudio.com/) (recomendado).
 
-``` bash
+---
+
+## Instalación de Cypress
+
+1. Abrir una consola o el terminal de VS Code.
+2. Ejecutar el siguiente comando para iniciar Cypress:
+
+```bash
 npx cypress open
 ```
 
-------------------------------------------------------------------------
+---
 
-# Cómo correr Cypress
+## Sitio de prueba
 
-Para abrir la interfaz de Cypress:
+El proyecto utiliza el siguiente sitio como entorno de pruebas:
 
-``` bash
-npx cypress open
+**Testing Playground:** <https://playground.bondaracademy.com/pages/iot-dashboard>
+
+---
+
+## Solución a error común en Windows (PowerShell)
+
+Al ejecutar comandos con `npx` en PowerShell, es posible que aparezca el siguiente error:
+
 ```
+npx : File D:\Software\Node\npx.ps1 cannot be loaded because running scripts is disabled on this system.
+For more information, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.
 
-------------------------------------------------------------------------
-
-# Comando de consola para correr todas las pruebas
-
-``` bash
-npx cypress run
-```
-
-------------------------------------------------------------------------
-
-# Error común en Windows (PowerShell)
-
-Si aparece el siguiente error:
-
-    npx : File D:\Software\Node\npx.ps1 cannot be loaded because running scripts is disabled on this system.
-    For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
-
-    At line:1 char:1
-    + npx cypress run
-    + ~~~
+At line:1 char:1
++ npx cypress run
++ ~~~
     + CategoryInfo          : SecurityError: (:) [], PSSecurityException
     + FullyQualifiedErrorId : UnauthorizedAccess
+```
 
-Esto ocurre porque **PowerShell tiene bloqueada la ejecución de
-scripts**.
+Esto ocurre porque **PowerShell tiene bloqueada la ejecución de scripts**. Para resolverlo:
 
-------------------------------------------------------------------------
+1. Abrir VS Code.
+2. Abrir el terminal integrado.
+3. Ejecutar el siguiente comando:
 
-# Solución recomendada
-
-### 1. Abrir VS Code
-
-### 2. Abrir el Terminal
-
-### 3. Ejecutar el siguiente comando
-
-``` powershell
+```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### 4. Cuando aparezca la confirmación, presionar:
+1. Cuando aparezca la confirmación, presionar `Y` y luego `Enter`.
+2. Reiniciar el terminal de VS Code.
+3. Ejecutar nuevamente el comando deseado:
 
-    Y
-
-### 5. Reiniciar el terminal de VS Code
-
-### 6. Ejecutar nuevamente:
-
-``` bash
+```bash
 npx cypress run
 ```
 
-------------------------------------------------------------------------
+## Orden de los archivos del demo
 
-# Sitio de prueba para Cypress
-
-Testing Playground:
-
-https://playground.bondaracademy.com/pages/iot-dashboard
+- [Archivo demo como base de la presentación](demo.md)
+- [Comandos de consola para demo](commands.md)
